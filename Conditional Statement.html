@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript Conditional Statement</h1>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="hour"></p>
+    <p id="greet"></p>
+
+    <script>
+      function myFunction() {
+        var greeting;
+
+        var time = new Date().getHours();
+
+        if (time < 12) {
+          greeting = "Gooooddd Mooorrninggggg Maaaaammmm/Saaaaarrrr";
+        } else if (time < 16) {
+          greeting = "Gooooddd Daaaayyyy Maaaaammmm/Saaaarrrr";
+        } else if (time < 21) {
+          greeting = "Gooooddd Eeevvninggggg Maaaaammmm/Saaaarrrr";
+        } else {
+          greeting = "Go sleep idiot and lemme read";
+        }
+        document.getElementById("hour").innerHTML = "Current Hour is : " + time;
+        document.getElementById("greet").innerHTML = greeting;
+      }
+    </script>
+  </body>
+</html>
